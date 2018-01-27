@@ -3,7 +3,7 @@ import sys
 
 def divisors(n):
     divs = [1]
-    for i in range(2,int(math.sqrt(n))+1):
+    for i in range(1,int(math.sqrt(n))+1):
         if n%i == 0:
             divs.extend([i,n/i])
         divs.extend([n])
@@ -24,10 +24,17 @@ while 1==1:
 
         i = 1
         for j in div_a:
+            j = int(j)
             for k in div_b:
+                k = int(k)
                 for l in div_c:
+                    l = int(l)
                     for m in div_d:
+                        m = int(m)
                         if (j*l==a and k*l==b) and (j*m==c and k*m==d):
+                            j = int(j)
                             print(str(i)+") "+str(j)+', '+str(k)+', '+str(l)+', '+str(m))
                             i += 1
         if i==1: print('none\n')
+        print('\n')
+        
